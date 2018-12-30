@@ -1,0 +1,162 @@
+body 
+{
+  font-family: 'Source Sans Pro', sans-serif;
+  /*property: value*/
+  background-color: #1aa6a3;
+}
+
+h6
+{
+  font-size: small;
+  color: black;
+}
+
+h2
+{
+  font-size: xx-large;
+  color: black;
+}
+
+a
+{
+ color: black; 
+}
+
+#nomePresenteCantiga
+{
+  text-transform: uppercase;
+}
+
+.animated jackInTheBox
+{
+  animation-duration: 3s;
+  animation-delay: 0.5s;
+}
+
+#inputGroupSelect01
+{
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  color: black;
+  font-size: small;
+  background-color: #d3d3d3;
+  border-color: #1aa6a3;
+  border-radius: 0px;
+  cursor: pointer;
+}
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {
+  height: 560px
+}
+
+/* Sets background color and 100% height */
+.sidenav {
+  padding-top: 20px;
+  background-color: #1aa6a3;
+  height: 100%;
+  font-size: x-large;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: center;
+  background-color: #1aa6a3;
+}
+
+.btn-play {
+    width: 95px;
+    height: 95px;
+    display:block;
+    border: 0;
+    outline: none;
+    float: left;
+    display: block;
+    background: url(play.png) center center no-repeat;
+    background-size: 90% 90%;
+    cursor: pointer;
+}
+
+.btn-stop {
+    width: 95px;
+    height: 95px;
+    display:none;
+    border: 0;
+    outline: none;
+    float: left;
+    background: url(pause.png) center center no-repeat;
+    background-size: 90% 90%;
+    cursor: pointer;
+}
+
+.iconVolume
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.slidecontainer {
+  width: 90%; /* Width of the outside container */
+  margin: auto;
+  background-color: #1aa6a3;
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 85%; /* Full-width */
+  height: 5px;
+  border-radius: 5px;  
+  background: white; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */ 
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px;
+  border-radius: 50%; 
+  background: #105756; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  -moz-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px;
+  border-radius: 50%;  
+  background: #105756; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+/* Set black background color, white text and some padding */
+footer {
+  background-color: #1aa6a3;
+  color: black;
+  padding: 15px;
+  font-size: xx-small;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+  .sidenav {
+    height: auto;
+    padding: 15px;
+  }
+  .row.content {height:auto;} 
+}

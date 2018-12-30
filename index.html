@@ -1,0 +1,113 @@
+<!-- icons from https://icons8.com/ -->
+<!-- https://daneden.github.io/animate.css/ -->
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv='cache-control' content='no-cache'>
+  <meta http-equiv='expires' content='0'>
+  <meta http-equiv='pragma' content='no-cache'>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC" rel="stylesheet">
+  <title>instrumentarium</title>
+  <link rel="stylesheet" type="text/css" href="assets/main.css">
+  <script type="text/javascript" src="https://tonejs.github.io/build/Tone.min.js"></script>
+  <script src="assets/StartAudioContext.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.3.1/wavesurfer.min.js"></script>
+  <script src="assets/jquery.knob.js"></script>
+</head>
+
+<body>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-3 flex-row" style="padding-top: 10px;">
+        <img src="assets/cm.jpg" class="img-rounded" width="100" height="100">
+      </div>
+
+      <div class="col-sm-6 flex-row text-center" style="padding-top: 50px;">
+        <h2 class="animated rollIn" id="nomePresenteCantiga"></h2>
+      </div>
+
+      <div class="col-sm-3 flex-row" style="padding-top: 10px;">
+        <!-- texto qualquer -->
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">    
+    <div class="row">
+
+      <div class="col-sm-3 sidenav text-center">
+        <h3>Canções</h3>
+        <div class="input-group mb-3 flex-row">
+          <div class="input-group-prepend">
+            <label for="inputGroupSelect01" id="inputGroup-sizing-sm"></label>
+          </div>
+          <select class="custom-select" id="inputGroupSelect01" onchange="atualizaEscolhaCancoes()">
+
+          </select>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+          <div class="btn-group flex-row" role="group" aria-label="Basic example">
+            <button type="button" class="btn-play"  id="playImagem" onclick="mudaImagem()"> </button>
+            <button type="button" class="btn-stop" id="stopImagem" onclick="mudaImagem()"></button>
+            <img src="assets/831.gif" id="loading" width="65" height="65" style="display:none">
+          </div>
+          <br>
+
+          <div class="iconVolume">
+            <img src="assets/choir.png" class="img-rounded" width="50" height="50">
+            <input type="range" min="1" max="100" value="50" class="slider" id="myRange0" oninput="valorSliders(this.value)" onchange="valorSliders(this.value)">
+          </div>
+          <div id="waveform1"></div>
+          <br>
+          <div class="iconVolume">
+            <img src="assets/music.png" class="img-rounded" width="50" height="50">
+            <input type="range" min="1" max="100" value="50" class="slider" id="myRange1" oninput="valorSliders(this.value)" onchange="valorSliders(this.value)">
+          </div>
+          <div id="waveform2"></div>
+          <br>
+          <div class="iconVolume">
+            <img src="assets/music.png" class="img-rounded" width="50" height="50">
+            <input type="range" min="1" max="100" value="50" class="slider" id="myRange2" oninput="valorSliders(this.value)" onchange="valorSliders(this.value)">
+          </div>
+          <div id="waveform3"></div>
+          <br>
+          <div class="iconVolume">
+            <img src="assets/music.png" class="img-rounded" width="50" height="50">
+            <input type="range" min="1" max="100" value="50" class="slider" id="myRange3" oninput="valorSliders(this.value)" onchange="valorSliders(this.value)">
+          </div>
+          <div id="waveform4"></div>
+
+      </div>
+
+      <div class="col-sm-3 sidenav text-justify">
+        <h6>O Instrumentarium é uma ferramenta desenvolvida pelo projeto Cantar Mais da Associação Portuguesa de Educação Musical. Tem como único objetivo possibilitar gratuitamente a audição e mistura das faixas áudio que compõem o repertório Cantar Mais. </h6>
+        <h6>Todos os excertos incluídos neste programa são propriedade da Associação Portuguesa de Educação Musical e destinam-se exclusivamente a fins educativos e de ensino, não tendo qualquer finalidade comercial ou económica.</h6>
+        <div class="text-center">
+          <br>
+          <img src="assets/apemtransparente.png" class="img-rounded">
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="container-fluid text-center">
+    <p> by <a href="https://www.filipelopes.net/" target="_blank"> Filipe Lopes </a> <span class="glyphicon glyphicon-copyright-mark"></span> 2019</p>
+  </footer>
+
+  <!-- Scripts gerais -->
+  <script src="meujs.js"></script>
+</body>
+</html>
